@@ -4,8 +4,6 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Weather</title>
-
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -22,49 +20,62 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;800&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
     <link rel="stylesheet" href="src/style.css" />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-  </head>
 
+    <title>Weather App 2</title>
+  </head>
   <body>
     <div class="container">
-      <form class="input-city" id="form-city">
-        <input
-          type="text"
-          class="form-control input-form"
-          placeholder="City name..."
-          autocomplete="off"
-          autofocus="on"
-          id="city-text-input"
-        />
-
-        <button type="submit" class="btn btn-outline-dark button-search">
-          <i class="fa-solid fa-magnifying-glass" id="submit"></i>
-        </button>
-        <button type="submit" class="btn btn-outline-dark button-search">
-          <i class="fa-solid fa-location-dot" id="location-button"></i></i>
-        </button>
-      </form>
-
-      <div class="currentinfo row">
-        <div class="col">
-          <div class="today">Today in</div>
-          <div class="city" id="city-name">KYIV</div>
-          <div class="correctday" id="day-today">Sunday, May 15, 2022</div>
-
-          <div class="temptoday">
-            <span class="current-temp" id="temp-today">0</span>
-            <a href="#" id="cels">°C</a>
-            <!-- <span class="stick">|</span>
-            <a href="#" id="fahr">°F</a> -->
+      <div class="weather-app-wrapper">
+        <div class="weather-app">
+          <form id="search-form" class="mb-3">
+            <div class="row">
+              <div class="col-9">
+                <input
+                  type="search"
+                  placeholder="City name.."
+                  class="form-control"
+                  id="city-input"
+                  autocomplete="off"
+                />
+              </div>
+              <div class="col-3">
+                <input
+                  type="submit"
+                  value="Search"
+                  class="btn btn-secondary button"
+                />
+              </div>
+            </div>
+          </form>
+          <div class="today-in">Today in</div>
+          <h1 id="city"></h1>
+          <div class="row">
+            <div class="col-6">
+              <ul>
+                <li id="date"></li>
+                <li>Humidity: <span id="humidity"></span>%</li>
+                <li>Wind: <span id="wind"></span> km/h</li>
+                <li id="description"></li>
+              </ul>
+              <div class="weather-temperature">
+                <span class="temperature" id="temperature"></span>
+                <span class="units">
+                  <a href="#" id="celsius-link" class="active">&deg;C</a> |
+                  <a href="#" id="fahrenheit-link">&deg;F</a>
+                </span>
+              </div>
+            </div>
+            <div class="col-6">
+              <img src="" alt="" id="icon" />
+            </div>
           </div>
-        </div>
-
-        <div class="col">
-          <i class="fa-solid fa-cloud-sun icon-weather-big"></i>
-        </div>
-      </div>
-      <div class="nextdays row">
+          <div class="row nextdays">
         <div class="col">
           <div>MON</div>
           <div>
@@ -106,8 +117,15 @@
         </div>
       </div>
     </div>
-    <div class="gitnub-link">
-      <a href="https://github.com/AlexDan42/weather-app" target="_blank">Open-source code</a>, by Alex Danyliuk
+    
+        </div>
+        <small class="github-link">
+          <a href="https://github.com/AlexDan42/weather-app" target="_blank"
+            >Open-source code</a
+          >
+          by Alex Danyliuk
+        </small>
+      </div>
     </div>
     <script src="src/index.js"></script>
   </body>
