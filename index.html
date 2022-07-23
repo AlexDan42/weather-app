@@ -27,13 +27,13 @@
     <link rel="stylesheet" href="src/style.css" />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
-    <title>Weather App 2</title>
+    <title>Weather App</title>
   </head>
   <body>
     <div class="container">
       <div class="weather-app-wrapper">
         <div class="weather-app">
-          <form id="search-form" class="mb-3">
+          <form id="search-form" class="mb-3 search-form">
             <div class="row">
               <div class="col-9">
                 <input
@@ -45,11 +45,15 @@
                 />
               </div>
               <div class="col-3">
-                <input
+                <button class="btn">
+                  <span class="search">Search</span>
+                  <i class="fa fa-search"></i>
+                </button>
+                <!-- <input
                   type="submit"
                   value="Search"
                   class="btn btn-secondary button"
-                />
+                /> -->
               </div>
             </div>
           </form>
@@ -59,8 +63,18 @@
             <div class="col-6">
               <ul>
                 <li id="date"></li>
-                <li>Humidity: <span id="humidity"></span>%</li>
-                <li>Wind: <span id="wind"></span> km/h</li>
+                <li id="air">
+                  <span class="material-symbols-outlined" id="air-icon"
+                    >air</span
+                  >
+                  <sup><span id="wind"></span> km/h</sup>
+                </li>
+                <li id="drop">
+                  <span class="material-symbols-outlined" id="drop-icon"
+                    >water_drop</span
+                  >
+                  <sup><span id="humidity"></span>%</sup>
+                </li>
                 <li id="description"></li>
               </ul>
               <div class="weather-temperature">
@@ -73,49 +87,6 @@
             </div>
           </div>
           <div class="weather-forecast" id="forecast"></div>
-
-          <!-- <div class="row nextdays">
-            <div class="col">
-              <div>MON</div>
-              <div>
-                <i class="fa-solid fa-cloud-sun icon-weather"></i>
-              </div>
-              <div>19°C</div>
-            </div>
-
-            <div class="col">
-              <div>TUE</div>
-              <div>
-                <i class="fa-solid fa-cloud-sun icon-weather"></i>
-              </div>
-              <div>20°C</div>
-            </div>
-
-            <div class="col">
-              <div>WED</div>
-              <div>
-                <i class="fa-solid fa-cloud-showers-heavy icon-weather"></i>
-              </div>
-              <div>14°C</div>
-            </div>
-
-            <div class="col">
-              <div>THU</div>
-              <div>
-                <i class="fa-solid fa-cloud-sun icon-weather"></i>
-              </div>
-              <div>21°C</div>
-            </div>
-
-            <div class="col">
-              <div>FRI</div>
-              <div>
-                <i class="fa-solid fa-cloud-sun icon-weather"></i>
-              </div>
-              <div>21°C</div>
-            </div>
-          </div>
-           -->
         </div>
       </div>
       <div>
