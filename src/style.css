@@ -8,7 +8,7 @@ h1 {
   margin-left: -3px;
   font-weight: 800;
   text-transform: uppercase;
-  margin: 20px auto 5px auto;
+  margin: 20px auto 0 auto;
 }
 
 ul {
@@ -48,7 +48,7 @@ li:first-letter {
 .today-in {
   color: #eb6e4c;
   font-size: 15px;
-  margin-top: 40px;
+  margin-top: 30px;
 }
 
 .weather-app-wrapper {
